@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.home {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  overflow: hidden;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 60px;
+  animation: slideDown 1s ease;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.navbar li {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.navbar li:hover {
+  color: #ffd369;
+}
+
+/* Hero Section */
+.hero {
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.title {
+  font-size: 3.5rem;
+  animation: fadeUp 1.2s ease;
+}
+
+.title span {
+  color: #ffd369;
+}
+
+.subtitle {
+  max-width: 600px;
+  margin: 20px 0;
+  font-size: 1.2rem;
+  animation: fadeUp 1.6s ease;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  animation: fadeUp 2s ease;
+}
+
+.btn {
+  padding: 14px 30px;
+  border-radius: 30px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.primary {
+  background: #ffd369;
+  color: #333;
+}
+
+.primary:hover {
+  background: #ffbf00;
+  transform: translateY(-3px);
+}
+
+.secondary {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.secondary:hover {
+  background: white;
+  color: #333;
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .navbar {
+    padding: 20px;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+}
